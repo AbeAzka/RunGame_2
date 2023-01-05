@@ -3,20 +3,29 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41c7f888198b7824c971f28883c2a36d, type: 3}
   m_Name: TrelloPosterExample
   m_EditorClassIdentifier: 
-  key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  token: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  boardId: XXXXXXXXXXXXXXXXXXXXXXXX
+  key: 7f66fb630cf14fc6f4db3fb5546c9e63
+  token: ATTAd2a8df4c209090e5f82c2febdcda9846793df79f491bc5ce81b258a16fc4130831B4DD03
+  boardId: 63b6b57373c51d00412f6ae5
   cardLists:
-  - name: Card List Name
-    id: XXXXXXXXXXXXXXXXXXXXXXXX
+  - name: Bugs
+    id: 63b6b57373c51d00412f6aec
+  - name: Suggestion
+    id: 63b6b57373c51d00412f6aed
+  - name: Other
+    id: 63b6b57373c51d00412f6aee
   cardLabels:
-  - name: Card Label Name
-    id: XXXXXXXXXXXXXXXXXXXXXXXX
+  - name: Normal
+    id: 63b6be9bd71e39044b854ab1
+  - name: Medium
+    id: 63b6b573fd1f4ecff3862d5a
+  - name: High
+    id: 63b6b573fd1f4ecff3862d5c
