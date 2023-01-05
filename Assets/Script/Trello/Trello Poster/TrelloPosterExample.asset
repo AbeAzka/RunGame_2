@@ -23,9 +23,9 @@ MonoBehaviour:
   - name: Other
     id: 63b6b57373c51d00412f6aee
   cardLabels:
-  - name: Normal
+  - name: Normal Priority
     id: 63b6be9bd71e39044b854ab1
-  - name: Medium
+  - name: Medium Priority
     id: 63b6b573fd1f4ecff3862d5a
-  - name: High
+  - name: High Priority
     id: 63b6b573fd1f4ecff3862d5c
