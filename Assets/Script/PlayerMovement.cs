@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
+    
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -34,13 +36,14 @@ public class PlayerMovement : MonoBehaviour
     {
         dirX = CrossPlatformInputManager.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-
+       
         if (CrossPlatformInputManager.GetButtonDown("Jump") && IsGrounded())
         {
             jumpSoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            
         }
-
+        
         UpdateAnimationState();
     }
 
