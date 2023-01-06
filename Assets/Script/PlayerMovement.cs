@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
+    bool doubleJump;
     
 
     [SerializeField] private LayerMask jumpableGround;
@@ -37,10 +38,21 @@ public class PlayerMovement : MonoBehaviour
         dirX = CrossPlatformInputManager.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
        
-        if (CrossPlatformInputManager.GetButtonDown("Jump") && IsGrounded())
+        if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
-            jumpSoundEffect.Play();
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            if (IsGrounded())
+            {
+                jumpSoundEffect.Play();
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                doubleJump = true;
+            }
+
+            else if (doubleJump)
+            {
+                jumpSoundEffect.Play();
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                doubleJump = false;
+            }
             
         }
         
@@ -78,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetInteger("state", (int)state);
     }
 
-    private bool IsGrounded()
+     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
