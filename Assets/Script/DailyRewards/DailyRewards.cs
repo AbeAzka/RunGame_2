@@ -137,31 +137,14 @@ namespace DailyRewardSystem
 			Reward reward = rewardsDB.GetReward(nextRewardIndex);
 
 			//check reward type
-			if (reward.Type == RewardType.Metals)
-			{
+			
+			
 				Debug.Log("<color=white>" + reward.Type.ToString() + " Claimed : </color>+" + reward.Amount);
-				GameData.Metals += reward.Amount;
-				fxMetals.Play();
-				UpdateMetalsTextUI();
-
-			}
-			else if (reward.Type == RewardType.Coins)
-			{
-				Debug.Log("<color=yellow>" + reward.Type.ToString() + " Claimed : </color>+" + reward.Amount);
 				GameData.Coins += reward.Amount;
 				fxCoins.Play();
 				UpdateCoinsTextUI();
 
-			}
-			else
-			{//reward.Type == RewardType.Gems
-				Debug.Log("<color=green>" + reward.Type.ToString() + " Claimed : </color>+" + reward.Amount);
-				GameData.Gems += reward.Amount;
-				fxGems.Play();
-				UpdateGemsTextUI();
-
-				
-			}
+			
 		}
 
 		void ActivateReward()
