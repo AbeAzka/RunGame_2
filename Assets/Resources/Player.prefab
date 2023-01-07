@@ -654,7 +654,7 @@ MonoBehaviour:
     SynchronizeType: 1
     Name: state
   - Type: 9
-    SynchronizeType: 1
+    SynchronizeType: 0
     Name: death
   m_SynchronizeLayers:
   - SynchronizeType: 0

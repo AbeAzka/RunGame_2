@@ -560,7 +560,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10249448, y: -0.11530638}
+  m_Offset: {x: 0.07055104, y: -0.07355738}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -571,7 +571,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5643983, y: 1.7693872}
+  m_Size: {x: 1.756058, y: 1.8528852}
   m_EdgeRadius: 0
 --- !u!212 &69528585
 SpriteRenderer:
@@ -651,8 +651,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08579874, y: -0.08579874}
-  m_Size: {x: 1.5393963, y: 1.8284025}
+  m_Offset: {x: 0.10177028, y: -0.029897988}
+  m_Size: {x: 1.731056, y: 1.940204}
   m_Direction: 0
 --- !u!114 &69528588
 MonoBehaviour:
@@ -671,9 +671,9 @@ MonoBehaviour:
   dialogue:
   - Hello
   - This is a Beta version from NPC dialogue
-  - Version 0.10
+  - Version 1.0
   continueBtn: {fileID: 1512552077}
-  NPCbtn: {fileID: 291513825}
+  NPCBtn: {fileID: 291513825}
   wordSpeed: 0.1
   playerIsClose: 0
 --- !u!1001 &105800406
@@ -902,7 +902,7 @@ GameObject:
   - component: {fileID: 291513828}
   - component: {fileID: 291513827}
   m_Layer: 5
-  m_Name: NPC
+  m_Name: SelBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -925,8 +925,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -116, y: 198}
-  m_SizeDelta: {x: 69.903, y: 57.1128}
+  m_AnchoredPosition: {x: -133.4797, y: 198}
+  m_SizeDelta: {x: 104.8625, y: 57.1128}
   m_Pivot: {x: 0.50000036, y: 0.49999988}
 --- !u!114 &291513827
 MonoBehaviour:
@@ -65231,7 +65231,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NPC
+  m_Text: Select
 --- !u!222 &1849148479
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 8937950323883019909}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,7 +201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c373c4ec0b6c5b4c8eb76a58828a9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 8937950323883019934}
   deathSoundEffect: {fileID: 8937950323883019909}
 --- !u!82 &8937950323883019931
 AudioSource:

@@ -12,7 +12,7 @@ public class NPC : MonoBehaviour
     public string[] dialogue;
     private int index;
     public GameObject continueBtn;
-    public GameObject NPCbtn;
+    public GameObject NPCBtn;
 
     public float wordSpeed;
     public bool playerIsClose;
@@ -28,7 +28,7 @@ public class NPC : MonoBehaviour
             else
             {
                 dialoguePanel.SetActive(true);
-                NPCbtn.SetActive(false);
+                NPCBtn.SetActive(false);
                 StartCoroutine(Typing());
             }
         }
@@ -44,7 +44,7 @@ public class NPC : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
-        NPCbtn.SetActive(true);
+        NPCBtn.SetActive(true);
 
     }
 
