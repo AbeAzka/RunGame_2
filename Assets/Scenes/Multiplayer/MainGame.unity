@@ -92304,7 +92304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 6095763590565446065, guid: b9256f7c5e9740f46a88d42b03753960, type: 3}
-  SceneCamera: {fileID: 0}
+  SceneCamera: {fileID: 519420028}
   PingText: {fileID: 1927576920}
   minX: -5.95
   maxX: -3.67

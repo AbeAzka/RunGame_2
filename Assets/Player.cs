@@ -34,9 +34,6 @@ public class Player : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         view = GetComponent<PhotonView>();
-       
-        
-
     }
 
     // Update is called once per frame

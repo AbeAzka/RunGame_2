@@ -22,6 +22,8 @@ public class SpawnPlayer : MonoBehaviour
         SceneCamera.SetActive(false);
     }
 
+    
+
     private void Update()
     {
         PingText.text = "Ping: " + PhotonNetwork.GetPing();
