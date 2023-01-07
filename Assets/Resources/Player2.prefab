@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 9203048424500969616}
   - component: {fileID: 8392612641433166481}
   - component: {fileID: 4329716364851285358}
-  - component: {fileID: 2975461504904530430}
+  - component: {fileID: 7246173929538935110}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -579,7 +579,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 4329716364851285358}
-  - {fileID: 2975461504904530430}
+  - {fileID: 7246173929538935110}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bf6c6a1dc573b441b3e06498955e178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerCamera: {fileID: 0}
+  PlayerCamera: {fileID: 2744502407888484424}
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
@@ -635,7 +635,7 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
---- !u!114 &2975461504904530430
+--- !u!114 &7246173929538935110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -647,7 +647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 0
+  ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 3
