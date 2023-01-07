@@ -40,8 +40,7 @@ public class PlayerLife : MonoBehaviour
 
     private void RestartLevel()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Loading");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     
