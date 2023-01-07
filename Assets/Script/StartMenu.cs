@@ -15,4 +15,10 @@ public class StartMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Quitting From RunGame 2");
     }
+
+    public void Multiplayer()
+    {
+        SceneManager.LoadScene("Multiplayer_RunGame");
+        Debug.Log("Scene Loaded...");
+    }
 }
