@@ -18,7 +18,7 @@ public class StartMenu : MonoBehaviour
 
     public void Multiplayer()
     {
-        SceneManager.LoadScene("Multiplayer_RunGame");
+        SceneManager.LoadScene("Loading");
         Debug.Log("Scene Loaded...");
     }
 }
