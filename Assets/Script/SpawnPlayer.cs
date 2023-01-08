@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SpawnPlayer : MonoBehaviour
 {
+    public static SpawnPlayer Instance;
     public GameObject playerPrefab;
     public GameObject SceneCamera;
     public Text PingText;
@@ -15,6 +16,16 @@ public class SpawnPlayer : MonoBehaviour
     public float minY;
     public float maxY;
 
+    [HideInInspector] public GameObject LocalPlayer;
+    public Text RespawnTimerText;
+    public GameObject RespawnMenu;
+    private float TimerAmount = 5f;
+    private bool RunSpawnTimer = false;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
@@ -38,6 +49,33 @@ public class SpawnPlayer : MonoBehaviour
         if (PingText.text.Length == 7)
         {
             PingText.color = Color.green;
+        }
+
+        if (RunSpawnTimer)
+        {
+            StartRespawn();
+        }
+    }
+
+    public void EnableRespawn()
+    {
+        TimerAmount = 5f;
+        RunSpawnTimer = true;
+        RespawnMenu.SetActive(true);
+    }
+    
+
+    private void StartRespawn()
+    {
+        TimerAmount -= Time.deltaTime;
+        RespawnTimerText.text = "RESPAWNING IN " + TimerAmount.ToString("FO");
+
+        if (TimerAmount <= 0)
+        {
+            LocalPlayer.GetComponent<PhotonView>().RPC("Respawn", RpcTarget.AllBuffered);
+            LocalPlayer.GetComponent<Health1>().EnableInput();
+            RespawnMenu.SetActive(false);
+            RunSpawnTimer = false;
         }
     }
 }

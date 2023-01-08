@@ -777,6 +777,7 @@ MonoBehaviour:
     m_Bits: 64
   moveSpeed: 7
   jumpForce: 10
+  DisableInput: 0
   jumpSoundEffect: {fileID: 6095763590565446073}
 --- !u!114 &7246173929538935110
 MonoBehaviour:
@@ -834,6 +835,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FillImage: {fileID: 492995455893297198}
+  HealthAmount: 30
+  plMove: {fileID: 8392612641433166481}
+  rb: {fileID: 6095763590565446076}
+  bc: {fileID: 6095763590565446077}
+  sr: {fileID: 6095763590565446079}
+  PlayerCanvas: {fileID: 7928031307282230527}
 --- !u!1 &7928031307282230527
 GameObject:
   m_ObjectHideFlags: 0

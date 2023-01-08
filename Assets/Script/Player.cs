@@ -30,6 +30,8 @@ public class Player : MonoBehaviourPunCallbacks
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
 
+    public bool DisableInput = false;
+
     private enum MovementState { idle, running, jumping, falling }
 
     [SerializeField] private AudioSource jumpSoundEffect;
@@ -47,7 +49,7 @@ public class Player : MonoBehaviourPunCallbacks
     // Update is called once per frame
     private void Update()
     {
-        if (view.IsMine)
+        if (view.IsMine && !DisableInput)
         {
 
             PlayerCamera.SetActive(true);
