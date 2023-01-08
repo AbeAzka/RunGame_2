@@ -55,6 +55,10 @@ public class Player : MonoBehaviourPunCallbacks
             dirX = CrossPlatformInputManager.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
+            if (CrossPlatformInputManager.GetButtonDown("Shoot"))
+            {
+                Shoot();
+            }
             if (CrossPlatformInputManager.GetButtonDown("Jump"))
             {
                 if (IsGrounded())
@@ -84,7 +88,15 @@ public class Player : MonoBehaviourPunCallbacks
     }
     private void Shoot()
     {
-        GameObject obj = PhotonNetwork.Instantiate(BulletObject.name, new Vector2(FirePos.transform.position.x, FirePos.transform.position.y), Quaternion.identity, 0);
+        if (sprite.flipX == false)
+        {
+            GameObject obj = PhotonNetwork.Instantiate(BulletObject.name, new Vector2(FirePos.transform.position.x, FirePos.transform.position.y), Quaternion.identity, 0);
+        }
+        if (sprite.flipX == true)
+        {
+            GameObject obj = PhotonNetwork.Instantiate(BulletObject.name, new Vector2(FirePos.transform.position.x, FirePos.transform.position.y), Quaternion.identity, 0);
+            obj.GetComponent<PhotonView>().RPC("ChangeDir_left", RpcTarget.AllBuffered);
+        }
         anim.SetTrigger("shootTrigger");
     }
     private void UpdateAnimationState()
