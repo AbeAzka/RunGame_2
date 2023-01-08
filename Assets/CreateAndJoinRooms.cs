@@ -6,9 +6,18 @@ using Photon.Pun;
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
-    public InputField createInput;
-    public InputField joinInput;
+    [SerializeField] public InputField createInput;
+    [SerializeField] public InputField joinInput;
+    [SerializeField] private GameObject UsernameMenu;
 
+    [SerializeField] private GameObject ConnectPanel;
+    [SerializeField] private InputField UsernameInput;
+    [SerializeField] private GameObject StartButton;
+
+    private void Start()
+    {
+        UsernameMenu.SetActive(true);
+    }
     public void CreateRoom()
     {
         PhotonNetwork.CreateRoom(createInput.text);
@@ -20,5 +29,23 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         PhotonNetwork.LoadLevel("MainGame");
+    }
+
+    public void ChangeUsernameInput()
+    {
+        if (UsernameInput.text.Length >= 3)
+        {
+            StartButton.SetActive(true);
+        }
+        else
+        {
+            StartButton.SetActive(false);
+        }
+    }
+
+    public void SetUserName()
+    {
+        UsernameMenu.SetActive(false);
+        PhotonNetwork.NickName = UsernameInput.text;
     }
 }

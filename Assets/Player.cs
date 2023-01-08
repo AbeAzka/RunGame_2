@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using Photon.Pun;
 
-public class Player : MonoBehaviour
+using UnityEngine.UI;
+
+public class Player : MonoBehaviourPunCallbacks
 {
     private Rigidbody2D rb;
     private BoxCollider2D coll;
@@ -13,6 +15,8 @@ public class Player : MonoBehaviour
     bool doubleJump;
     PhotonView view;
     public GameObject PlayerCamera;
+    public Text PlayerNameText;
+    
     
 
 
@@ -41,7 +45,9 @@ public class Player : MonoBehaviour
     {
         if (view.IsMine)
         {
+
             PlayerCamera.SetActive(true);
+            PlayerNameText.text = PhotonNetwork.NickName;
             dirX = CrossPlatformInputManager.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
@@ -61,6 +67,11 @@ public class Player : MonoBehaviour
                     doubleJump = false;
                 }
 
+            }
+            else
+            {
+                PlayerNameText.text = photonView.Owner.NickName;
+                PlayerNameText.color = Color.blue;
             }
 
             UpdateAnimationState();
