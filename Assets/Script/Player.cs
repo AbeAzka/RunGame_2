@@ -11,11 +11,15 @@ public class Player : MonoBehaviourPunCallbacks
     private Rigidbody2D rb;
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
+
     private Animator anim;
     bool doubleJump;
     PhotonView view;
+
     public GameObject PlayerCamera;
     public Text PlayerNameText;
+    public GameObject BulletObject;
+    public Transform FirePos;
     
     
 
@@ -78,11 +82,14 @@ public class Player : MonoBehaviourPunCallbacks
         }
         
     }
-
+    private void Shoot()
+    {
+        GameObject obj = PhotonNetwork.Instantiate(BulletObject.name, new Vector2(FirePos.transform.position.x, FirePos.transform.position.y), Quaternion.identity, 0);
+        anim.SetTrigger("shootTrigger");
+    }
     private void UpdateAnimationState()
     {
-        if (view.IsMine)
-        {
+        
             MovementState state;
 
             if (dirX > 0f)
@@ -110,7 +117,7 @@ public class Player : MonoBehaviourPunCallbacks
             }
 
             anim.SetInteger("state", (int)state);
-        }
+        
     }
 
     private bool IsGrounded()
