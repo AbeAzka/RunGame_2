@@ -56,6 +56,7 @@ public class Health1 : MonoBehaviourPun
         PlayerCanvas.SetActive(false);
     }
 
+    [PunRPC]
     private void Respawn()
     {
         rb.gravityScale = 1;

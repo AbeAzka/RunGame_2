@@ -24,12 +24,10 @@ public class Bullet1 : MonoBehaviourPun, IPunObservable
         if (stream.IsWriting)
         {
             stream.SendNext(transform.position);
-            stream.SendNext(transform.position);
         }
         else if (stream.IsReading)
         {
             transform.position = (Vector2)stream.ReceiveNext();
-           
         }
     }
 
