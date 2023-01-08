@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using Photon.Pun;
-
+using Photon.Realtime;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviourPunCallbacks
@@ -37,6 +37,18 @@ public class Player : MonoBehaviourPunCallbacks
     [SerializeField] private AudioSource jumpSoundEffect;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        if (photonView.IsMine)
+        {
+            PlayerNameText.text = PhotonNetwork.NickName;
+        }
+        else
+        {
+            PlayerNameText.text = photonView.Owner.NickName;
+            PlayerNameText.color = Color.blue;
+        }
+    }
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -78,11 +90,7 @@ public class Player : MonoBehaviourPunCallbacks
                 }
 
             }
-            else
-            {
-                PlayerNameText.text = photonView.Owner.NickName;
-                PlayerNameText.color = Color.blue;
-            }
+            
 
             UpdateAnimationState();
         }

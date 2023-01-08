@@ -74,8 +74,15 @@ public class SpawnPlayer : MonoBehaviour
         {
             LocalPlayer.GetComponent<PhotonView>().RPC("Respawn", RpcTarget.AllBuffered);
             LocalPlayer.GetComponent<Health1>().EnableInput();
+            RespawnLocation();
             RespawnMenu.SetActive(false);
             RunSpawnTimer = false;
         }
+    }
+
+    public void RespawnLocation()
+    {
+        float randomValue = Random.Range(-3, 5f);
+        LocalPlayer.transform.localPosition = new Vector2(randomValue, 3f);
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
+using Photon.Realtime;
 
 public class Health1 : MonoBehaviourPun
 {
@@ -12,6 +13,7 @@ public class Health1 : MonoBehaviourPun
 
     public Player plMove;
     public Rigidbody2D rb;
+    
     public BoxCollider2D bc;
     public SpriteRenderer sr;
     public GameObject PlayerCanvas;
@@ -21,6 +23,8 @@ public class Health1 : MonoBehaviourPun
         SpawnPlayer.Instance.LocalPlayer = this.gameObject;
 
     }
+
+    
 
     [PunRPC]
     public void ReduceHealth(float amount)
@@ -59,6 +63,8 @@ public class Health1 : MonoBehaviourPun
         bc.enabled = true;
         sr.enabled = true;
         PlayerCanvas.SetActive(true);
+        FillImage.fillAmount = 1f;
+        HealthAmount = 100f;
     }
 
     private void ModifyHealth(float amount)
