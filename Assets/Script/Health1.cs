@@ -20,12 +20,11 @@ public class Health1 : MonoBehaviourPun
 
     private void Awake()
     {
-        SpawnPlayer.Instance.LocalPlayer = this.gameObject;
-
+        if (photonView.IsMine)
+        {
+            SpawnPlayer.Instance.LocalPlayer = this.gameObject;
+        }
     }
-
-    
-
     [PunRPC]
     public void ReduceHealth(float amount)
     {

@@ -68,7 +68,7 @@ public class SpawnPlayer : MonoBehaviour
     private void StartRespawn()
     {
         TimerAmount -= Time.deltaTime;
-        RespawnTimerText.text = "RESPAWNING IN " + TimerAmount.ToString("FO");
+        RespawnTimerText.text = "RESPAWNING IN " + TimerAmount.ToString("F0");
 
         if (TimerAmount <= 0)
         {
