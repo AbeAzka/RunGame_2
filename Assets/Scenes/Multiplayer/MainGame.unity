@@ -90996,7 +90996,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 647627947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f391c9de534d00b4f9594d58b3e0a601, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b8c5b80f2b999d44bdaff6cad22ec91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 634820068}
@@ -91045,7 +91045,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 647627948}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenuMulti, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
@@ -96445,9 +96445,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 647627948}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Home
-        m_Mode: 3
+        m_TargetAssemblyTypeName: PauseMenuMulti, Assembly-CSharp
+        m_MethodName: DisconnectPlayer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -98522,7 +98522,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 647627948}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenuMulti, Assembly-CSharp
         m_MethodName: resume
         m_Mode: 1
         m_Arguments:

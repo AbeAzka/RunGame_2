@@ -13,10 +13,13 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject ConnectPanel;
     [SerializeField] private InputField UsernameInput;
     [SerializeField] private GameObject StartButton;
+    [SerializeField] private GameObject ListRoomMenu;
 
     private void Start()
     {
+        ListRoomMenu.SetActive(false);
         UsernameMenu.SetActive(true);
+
     }
     public void CreateRoom()
     {
@@ -47,5 +50,15 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     {
         UsernameMenu.SetActive(false);
         PhotonNetwork.NickName = UsernameInput.text;
+    }
+
+    public void ShowListingRoom()
+    {
+        ListRoomMenu.SetActive(true);
+    }
+
+    public void HideListingMenu()
+    {
+        ListRoomMenu.SetActive(false);
     }
 }

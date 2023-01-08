@@ -8,7 +8,7 @@ public class BuildVersionProsesor : IPreprocessBuildWithReport
 {
     public int callbackOrder => 0;
 
-    private const string initialVersion = "0.0";
+    private const string initialVersion = "0.3";
 
     public void OnPreprocessBuild(BuildReport report)
     {
@@ -27,7 +27,7 @@ public class BuildVersionProsesor : IPreprocessBuildWithReport
     {
         if (float.TryParse(version, out float versionNumber))
         {
-            float newVersion = versionNumber = 1.3f;
+            float newVersion = versionNumber = 1.4f;
             string date = DateTime.Now.ToString("d");
 
             PlayerSettings.bundleVersion = string.Format("Version {0} - [{1}]", newVersion, date);

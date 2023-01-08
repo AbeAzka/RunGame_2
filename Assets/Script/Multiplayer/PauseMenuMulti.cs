@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenuMulti : MonoBehaviourPun
 {
     [SerializeField] GameObject pauseMenu;
-    
+
 
     public void Pause()
     {
@@ -21,9 +21,19 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void Home(int sceneID)
+    public void DisconnectPlayer()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneID);
+        StartCoroutine(DisconnectAndLoad());
+    }
+
+    IEnumerator DisconnectAndLoad()
+    {
+        PhotonNetwork.LeaveRoom();
+
+        while (PhotonNetwork.InRoom)
+            yield return null;
+        SceneManager.LoadScene("Lobby");
+        Debug.Log("Loaded Scene ");
+
     }
 }
