@@ -127,8 +127,7 @@ MonoBehaviour:
   MoveDir: 0
   MoveSpeed: 15
   DestroyTime: 2
-  BulletDamage: 1
-  players: 5
+  BulletDamage: 0.3
 --- !u!114 &2816132410243121812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +147,6 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 8818607120674016724}
   - {fileID: 761376127306128084}
   sceneViewId: 0
   InstantiationId: 0

@@ -10,6 +10,8 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     
     private void Start()
     {
+        PhotonNetwork.SendRate = 20;
+        PhotonNetwork.SerializationRate = 5;
         PhotonNetwork.ConnectUsingSettings();
     }
 

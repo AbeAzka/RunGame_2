@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class Bullet1 : MonoBehaviourPun
+public class Bullet1 : MonoBehaviourPun, IPunObservable
 {
     public bool MoveDir = false;
 
@@ -19,7 +19,19 @@ public class Bullet1 : MonoBehaviourPun
         StartCoroutine("DestroyByTime");
     }
 
-    
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(transform.position);
+            stream.SendNext(transform.position);
+        }
+        else if (stream.IsReading)
+        {
+            transform.position = (Vector2)stream.ReceiveNext();
+           
+        }
+    }
 
     IEnumerator DestroyByTime()
     {
