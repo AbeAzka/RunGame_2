@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: pushNotificationsSettings
   m_EditorClassIdentifier: 
   firebaseWebApiKey: 
-  firebaseProjectNumber: 
+  firebaseProjectNumber: ' 491067497133'
   firebaseAppID: 1:491067497133:android:f505a0adfe250d94dcc424
   firebaseProjectID: ' push-notification-9f1d0'
