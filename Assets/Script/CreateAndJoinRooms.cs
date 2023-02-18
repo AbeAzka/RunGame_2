@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
@@ -13,11 +14,12 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject ConnectPanel;
     [SerializeField] private InputField UsernameInput;
     [SerializeField] private GameObject StartButton;
-    [SerializeField] private GameObject ListRoomMenu;
+
+
 
     private void Start()
     {
-        ListRoomMenu.SetActive(false);
+
         UsernameMenu.SetActive(true);
 
     }
@@ -46,19 +48,20 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         }
     }
 
+    private void Warning()
+    {
+        
+    }
     public void SetUserName()
     {
         UsernameMenu.SetActive(false);
         PhotonNetwork.NickName = UsernameInput.text;
     }
 
-    public void ShowListingRoom()
+    public void connectBtn()
     {
-        ListRoomMenu.SetActive(true);
+        SceneManager.LoadScene("Loading");
     }
 
-    public void HideListingMenu()
-    {
-        ListRoomMenu.SetActive(false);
-    }
+    
 }
