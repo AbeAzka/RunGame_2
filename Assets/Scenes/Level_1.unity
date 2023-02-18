@@ -58419,7 +58419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1419890552789334425, guid: b9107df8bab2bec4a9cce7f5e3187040, type: 3}
+  m_Sprite: {fileID: -7762350047352875558, guid: 796bc64953f389d4a9179b3482fae737, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -62243,7 +62243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7459446148092876325, guid: 45c4663e309ee294d9f1370bc2053f5c, type: 3}
+  m_Sprite: {fileID: 7690072442612862611, guid: 796bc64953f389d4a9179b3482fae737, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -62473,7 +62473,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4433539168102762298, guid: b1a95dcbe70f5654eb7a6aa34d7fb835, type: 3}
+  m_Sprite: {fileID: -2715382943813668581, guid: 796bc64953f389d4a9179b3482fae737, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -63277,7 +63277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5666552777093224069, guid: 11cc6c6b8ba95594e9cd09ec5a6fb571, type: 3}
+  m_Sprite: {fileID: 4063408169990092096, guid: b7340c9eab9fd1f4999d0b088b7084a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -64311,7 +64311,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d77bd9321882b4643be4e064f711eb88, type: 3}
-    m_FontSize: 26
+    m_FontSize: 23
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -64513,7 +64513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6251451809504726511, guid: 11cc6c6b8ba95594e9cd09ec5a6fb571, type: 3}
+  m_Sprite: {fileID: 4063408169990092096, guid: b7340c9eab9fd1f4999d0b088b7084a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -64810,7 +64810,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7183195401824034768, guid: 11cc6c6b8ba95594e9cd09ec5a6fb571, type: 3}
+  m_Sprite: {fileID: 4063408169990092096, guid: b7340c9eab9fd1f4999d0b088b7084a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
