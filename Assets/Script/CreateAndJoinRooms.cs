@@ -19,10 +19,23 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-
         UsernameMenu.SetActive(true);
+        PhotonNetwork.SendRate = 20;
+        PhotonNetwork.SerializationRate = 5;
+        PhotonNetwork.ConnectUsingSettings();
 
     }
+
+    public override void OnConnectedToMaster()
+    {
+        PhotonNetwork.JoinLobby();
+    }
+
+    public override void OnJoinedLobby()
+    {
+        SceneManager.LoadScene("Lobby");
+    }
+
     public void CreateRoom()
     {
         PhotonNetwork.CreateRoom(createInput.text);
@@ -48,10 +61,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         }
     }
 
-    private void Warning()
-    {
-        
-    }
     public void SetUserName()
     {
         UsernameMenu.SetActive(false);

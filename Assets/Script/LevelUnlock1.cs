@@ -25,8 +25,43 @@ public class LevelUnlock1 : MonoBehaviour
         SceneManager.LoadScene("Start");
     }
 
-    public void LoadGame()
+    public void LoadGame_1()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level_1");
+    }
+
+    public void LoadGame_2()
+    {
+        SceneManager.LoadScene("Level_2");
+    }
+
+    public void LoadGame_3()
+    {
+        SceneManager.LoadScene("Level_3");
+    }
+
+    public void LoadGame_4()
+    {
+        SceneManager.LoadScene("Level_4");
+    }
+
+    public void LoadGame_5()
+    {
+        SceneManager.LoadScene("Level_5");
+    }
+
+    public void LoadGame_6()
+    {
+        SceneManager.LoadScene("Level_6");
+    }
+
+    public void LoadGame_7()
+    {
+        SceneManager.LoadScene("Level_7");
+    }
+
+    public void LoadGame_8()
+    {
+        SceneManager.LoadScene("Level_8");
     }
 }
