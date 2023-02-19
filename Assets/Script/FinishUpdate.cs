@@ -21,10 +21,12 @@ public class FinishUpdate : MonoBehaviour
             finishSound.Play();
             levelCompleted = true;
             int CompleteLevel = SceneManager.GetActiveScene().buildIndex + 1;
-            if (CompleteLevel == 7)
+            if (CompleteLevel == 8)
                 SceneManager.LoadScene(9);
+
             if (PlayerPrefs.GetInt("ReachedLevel", 1) < CompleteLevel)
                 PlayerPrefs.SetInt("ReachedLevel", CompleteLevel);
+
             SceneManager.LoadScene(CompleteLevel);
         }
     }

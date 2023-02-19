@@ -27,7 +27,7 @@ public class BuildVersionProsesor : IPreprocessBuildWithReport
     {
         if (float.TryParse(version, out float versionNumber))
         {
-            float newVersion = versionNumber = 1.5f;
+            float newVersion = versionNumber = 1.6f;
             string date = DateTime.Now.ToString("d");
 
             PlayerSettings.bundleVersion = string.Format("Version {0} - [{1}]", newVersion, date);
