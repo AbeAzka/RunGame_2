@@ -28,7 +28,7 @@
 
 ###
 
-<p align="left">You can install in itch.io, Or you can install via this</p>
-<a href="https://www.w3schools.com/">Install RunGame2</a>
+<p align="left">You can install in itch.io, Or you can install via <a href="https://www.w3schools.com/">This</a>this</p>
+
 
 ###
