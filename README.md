@@ -28,7 +28,7 @@
 
 ###
 
-<p align="left">You can install in itch.io, Or you can install via <a href="https://indodev.itch.io/rungame-2">this.</a></p>
+<p align="left">You can install in itch.io, Or you can install via <a href="https://indodev.itch.io/rungame-2">this</a>.</p>
 
 
 ###
