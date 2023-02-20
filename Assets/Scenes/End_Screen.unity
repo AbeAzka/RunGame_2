@@ -158,10 +158,10 @@ RectTransform:
   m_Father: {fileID: 424856830}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -227.46, y: -275.21}
-  m_SizeDelta: {x: 234.13, y: 77.18}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0000019073, y: -30}
+  m_SizeDelta: {x: 192.76, y: 45.109985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &298802780
 MonoBehaviour:
@@ -641,10 +641,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d77bd9321882b4643be4e064f711eb88, type: 3}
-    m_FontSize: 35
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -769,9 +769,9 @@ RectTransform:
   m_Father: {fileID: 424856830}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 28}
   m_SizeDelta: {x: 427.1669, y: 28.0764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1687995321
@@ -828,7 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374a124435e820248b9de5462a9efeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeStart: 2
+  delayBeforeStart: 1
   timeBtwChars: 0.1
   leadingChar: 
   leadingCharBeforeDelay: 0
@@ -867,10 +867,10 @@ RectTransform:
   m_Father: {fileID: 424856830}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 187, y: -275.21}
-  m_SizeDelta: {x: 234.12, y: 77.18}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0000019073, y: -93}
+  m_SizeDelta: {x: 192.76, y: 45.10501}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805382723
 MonoBehaviour:
@@ -989,7 +989,6 @@ GameObject:
   - component: {fileID: 1925927793}
   - component: {fileID: 1925927795}
   - component: {fileID: 1925927794}
-  - component: {fileID: 1925927796}
   m_Layer: 5
   m_Name: COMPLETED
   m_TagString: Untagged
@@ -1011,9 +1010,9 @@ RectTransform:
   m_Father: {fileID: 424856830}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 7, y: -86.305695}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 7, y: 86.694305}
   m_SizeDelta: {x: 703.0375, y: 61.1895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925927794
@@ -1058,22 +1057,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925927792}
   m_CullTransparentMesh: 1
---- !u!114 &1925927796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925927792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 374a124435e820248b9de5462a9efeb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayBeforeStart: 1
-  timeBtwChars: 0.1
-  leadingChar: 
-  leadingCharBeforeDelay: 0
 --- !u!1 &2023486473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,10 +1116,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d77bd9321882b4643be4e064f711eb88, type: 3}
-    m_FontSize: 35
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0

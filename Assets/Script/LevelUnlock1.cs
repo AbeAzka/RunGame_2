@@ -6,18 +6,30 @@ using UnityEngine.SceneManagement;
 
 public class LevelUnlock1 : MonoBehaviour
 {
+
+    int levelUnlocked;
+
     public Button[] levelButtons;
 
     void Start()
     {
-        foreach (Button b in levelButtons)
-            b.interactable = false;
+        levelUnlocked = PlayerPrefs.GetInt("ReachedLevel", 1);
 
-        int reachedLevel = PlayerPrefs.GetInt("ReachedLevel", 1);
+        for (int i = 0; i < levelButtons.Length; i++)
+        {
+            levelButtons[i].interactable = false;
+        }
 
-        for (int i = 0; i < reachedLevel; i++)
+        for (int i = 0; i < levelUnlocked; i++)
+        {
             levelButtons[i].interactable = true;
+        }
 
+    }
+
+    public void LoadLevel(int levelindex)
+    {
+        SceneManager.LoadScene(levelindex);
     }
 
     public void LoadMenu()
@@ -25,43 +37,4 @@ public class LevelUnlock1 : MonoBehaviour
         SceneManager.LoadScene("Start");
     }
 
-    public void LoadGame_1()
-    {
-        SceneManager.LoadScene("Level_1");
-    }
-
-    public void LoadGame_2()
-    {
-        SceneManager.LoadScene("Level_2");
-    }
-
-    public void LoadGame_3()
-    {
-        SceneManager.LoadScene("Level_3");
-    }
-
-    public void LoadGame_4()
-    {
-        SceneManager.LoadScene("Level_4");
-    }
-
-    public void LoadGame_5()
-    {
-        SceneManager.LoadScene("Level_5");
-    }
-
-    public void LoadGame_6()
-    {
-        SceneManager.LoadScene("Level_6");
-    }
-
-    public void LoadGame_7()
-    {
-        SceneManager.LoadScene("Level_7");
-    }
-
-    public void LoadGame_8()
-    {
-        SceneManager.LoadScene("Level_8");
-    }
 }

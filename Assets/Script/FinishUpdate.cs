@@ -20,14 +20,21 @@ public class FinishUpdate : MonoBehaviour
         {
             finishSound.Play();
             levelCompleted = true;
-            int CompleteLevel = SceneManager.GetActiveScene().buildIndex + 1;
-            if (CompleteLevel == 8)
-                SceneManager.LoadScene(9);
+            int currentLevel = SceneManager.GetActiveScene().buildIndex;
+            int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
 
-            if (PlayerPrefs.GetInt("ReachedLevel", 1) < CompleteLevel)
-                PlayerPrefs.SetInt("ReachedLevel", CompleteLevel);
+            if (currentLevel == 10)
+            {
+                SceneManager.LoadScene("End_Screen");
+            }
 
-            SceneManager.LoadScene(CompleteLevel);
+            if (currentLevel > PlayerPrefs.GetInt("ReachedLevel"))
+            {
+                PlayerPrefs.SetInt("ReachedLevel", currentLevel + 0);
+            }
+
+            Debug.Log("LEVEL" + PlayerPrefs.GetInt("ReachedLevel") + " UNLOCKED");
+            SceneManager.LoadScene(nextLevel);
         }
     }
 
