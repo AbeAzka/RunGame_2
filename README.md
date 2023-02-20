@@ -17,6 +17,14 @@
 
 ###
 
+<h2 align="left">🚥Version Unity We Use</h2>
+
+###
+
+<p align="left">Unity Version 2020.3.37f1</p>
+
+###
+
 <h2 align="left">⚠️ Minimum Requirements</h2>
 
 ###
@@ -31,15 +39,4 @@
 
 <p align="left">You can install in itch.io, Or you can install via <a href="https://indodev.itch.io/rungame-2">this</a>.</p>
 
-
 ###
-
-<h2 align="left">🚥Version Unity We Use</h2>
-
-###
-
-<p align="left">Unity Version 2020.3.37f1</p>
-
-###
-
-
