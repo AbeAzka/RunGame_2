@@ -17,7 +17,7 @@
 
 ###
 
-<h2 align="left">🚥Version Unity We Use</h2>
+<h2 align="left">⌨️ Version Unity We Use</h2>
 
 ###
 
@@ -33,7 +33,7 @@
 
 ###
 
-<h2 align="left">❓ Where We Can Install?</h2>
+<h2 align="left">❓ Where We Can Install The Game?</h2>
 
 ###
 
