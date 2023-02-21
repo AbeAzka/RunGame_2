@@ -40,3 +40,11 @@
 <p align="left">You can install in itch.io, Or you can install via <a href="https://indodev.itch.io/rungame-2">this</a>.</p>
 
 ###
+## Android Version That Support The Game
+
+Check your Android version that support for run the game.
+
+| Version | Supported          |
+| ------- | ------------------ |
+| > 5.1  | :white_check_mark: |
+| < 5.1| :x:                |
