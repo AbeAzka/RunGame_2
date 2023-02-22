@@ -23,7 +23,7 @@ public class FinishUpdate : MonoBehaviour
             int currentLevel = SceneManager.GetActiveScene().buildIndex;
             int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
 
-            if (currentLevel == 10)
+            if (currentLevel == 11)
             {
                 SceneManager.LoadScene("End_Screen");
             }
