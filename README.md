@@ -17,6 +17,14 @@
 
 ###
 
+<h2 align="left">⌨️ Version Unity We Use</h2>
+
+###
+
+<p align="left">Unity Version 2020.3.37f1</p>
+
+###
+
 <h2 align="left">⚠️ Minimum Requirements</h2>
 
 ###
@@ -25,21 +33,18 @@
 
 ###
 
-<h2 align="left">❓ Where We Can Install?</h2>
+<h2 align="left">❓ Where We Can Install The Game?</h2>
 
 ###
 
 <p align="left">You can install in itch.io, Or you can install via <a href="https://indodev.itch.io/rungame-2">this</a>.</p>
 
-
 ###
+## Android Version That Support The Game
 
-<h2 align="left">🚥Version Unity We Use</h2>
+Check your Android version that support for run the game.
 
-###
-
-<p align="left">Unity Version 2020.3.37f1</p>
-
-###
-
-
+| Version | Supported          |
+| ------- | ------------------ |
+| > 5.1  | :white_check_mark: |
+| < 5.1| :x:                |
