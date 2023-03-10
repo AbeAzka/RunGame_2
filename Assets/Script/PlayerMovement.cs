@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
     bool doubleJump;
+
+
     
 
     [SerializeField] private LayerMask jumpableGround;

@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 
-public class Home : MonoBehaviour
+public class Home : MonoBehaviourPunCallbacks
 {
     public void Back(int sceneID)
     {
-        PhotonNetwork.LeaveLobby();
+        PhotonNetwork.Disconnect();
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
     }
+
+ 
 }
