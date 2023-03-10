@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class RoomListing : MonoBehaviour
+public class RoomListing : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     private Text text;
@@ -13,6 +14,11 @@ public class RoomListing : MonoBehaviour
     public void SetRoomInfo(RoomInfo roomInfo)
     {
         RoomInfo = roomInfo;
-        text.text = roomInfo.MaxPlayers + ", " + roomInfo.Name;
+        text.text = roomInfo.Name + ", " + roomInfo.MaxPlayers;
+    }
+
+    public void OnClick_Btn()
+    {
+        PhotonNetwork.JoinRoom(RoomInfo.Name);
     }
 }
