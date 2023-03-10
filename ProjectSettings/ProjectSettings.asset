@@ -138,8 +138,10 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: Version 1.8 - [2/22/2023]
+  bundleVersion: Version 1.9 - [3/10/2023]
   preloadedAssets:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
