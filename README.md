@@ -23,13 +23,6 @@
 
 <p align="left">Unity Version 2020.3.37f1</p>
 
-###
-
-<h2 align="left">⚠️ Minimum Requirements</h2>
-
-###
-
-<p align="left">Android 5.1</p>
 
 ###
 
