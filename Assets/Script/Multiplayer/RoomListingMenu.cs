@@ -32,8 +32,11 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
             {
                 RoomListing listing = Instantiate(roomListing, content);
                 if (listing != null)
+                {
                     listing.SetRoomInfo(info);
                     listings.Add(listing);
+                }
+                  
             }
         }
     }
