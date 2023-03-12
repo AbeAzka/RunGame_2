@@ -15,10 +15,10 @@ MonoBehaviour:
   DevAccountEmail: azka.jsiswanto@gmail.com
   DevAccountToken: 84gcje63k66k76fkz6bka45wihnd9u6hmrzi3bgr66ahsgu4ti6ztdypg5sk514uk99k484wistjwj1aezqhynoukrkj5obzfw4868shs1em3pq8jc1784brx5fbmhx4bffe9hbsg69dp3bwf9qipmyihukmrebgck4rox394ic89wo6ohrq4e7eeajsokwj9qd77i1x
   AadAuthorization: 
-  SelectedStudio: 
-  SdkPath: 
+  SelectedStudio: IndoDev
+  SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 
-  PanelIsShown: 1
-  curMainMenuIdx: 0
+  PanelIsShown: 0
+  curMainMenuIdx: 1
   curSubMenuIdx: 0
