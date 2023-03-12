@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
+using PlayFab;
+using PlayFab.ClientModels;
 
 
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
-    
+    public Username username;
     private void Start()
     {
         PhotonNetwork.SendRate = 20;
@@ -22,6 +24,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
+        
         SceneManager.LoadScene("Lobby");
     }
 

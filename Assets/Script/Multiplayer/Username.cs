@@ -14,10 +14,7 @@ public class Username : MonoBehaviour
 
     void Start()
     {
-        if (string.IsNullOrEmpty(PlayFabSettings.TitleId))
-        {
-            PlayFabSettings.TitleId = "FE39E";
-        }
+        PlayFabClientAPI.GetUserData(new GetUserDataRequest(), OnDataReceived, OnError);
 
         if (PlayerPrefs.GetString("Username") == "" || PlayerPrefs.GetString("Username") == null)
         {
@@ -49,33 +46,37 @@ public class Username : MonoBehaviour
     void OnDataReceived(GetUserDataResult result)
     {
         Debug.Log("Received user data!");
-        if (result.Data != null && result.Data.ContainsKey("Username") && result.Data.ContainsKey("UserInfo") && result.Data.ContainsKey("MyUsername"))
+        if (result.Data != null && result.Data.ContainsKey("Username"))
         {
-            PhotonNetwork.NickName = inputField.text;
-            PlayerPrefs.GetString("Username", inputField.text);
-            MyUsername.text = inputField.text;
+        }
+        else
+        {
+            Debug.Log("Player data not complete!");
         }
     }
     public void SaveUsername()
+    {
+        PhotonNetwork.NickName = inputField.text;
+
+        PlayerPrefs.SetString("Username", inputField.text);
+
+        MyUsername.text = inputField.text;
+
+        UsernamePage.SetActive(false);
+
+        Save();
+    }
+
+    void Save()
     {
         var request = new UpdateUserDataRequest
         {
             Data = new Dictionary<string, string>()
             {
-                {"Username", PhotonNetwork.NickName = inputField.text},
-                {"UserInfo", PlayerPrefs.GetString("Username", inputField.text) },
-                {"MyUsername",  MyUsername.text = inputField.text }
+                {"Name", PlayerPrefs.GetString("Username", inputField.text)},
             }
         };
         PlayFabClientAPI.UpdateUserData(request, OnDataSend, OnError);
-
-        PhotonNetwork.NickName = inputField.text;
-
-        PlayerPrefs.GetString("Username", inputField.text);
-
-        MyUsername.text = inputField.text;
-
-        UsernamePage.SetActive(false);
     }
 
     void OnDataSend(UpdateUserDataResult result)
